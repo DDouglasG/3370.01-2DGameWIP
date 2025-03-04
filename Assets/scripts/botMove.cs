@@ -26,7 +26,6 @@ public class botMove : MonoBehaviour {
         rb.linearVelocity = new Vector2(speedX, rb.linearVelocity.y);
 
 
-        // Fix 2: Use ForceMode2D.Impulse for better jump response
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))) { // && isGrounded
             Debug.Log("Jumping!");  // Debug message
             rb.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
